@@ -47,7 +47,7 @@
                             </tr>
                             <tr>
                                 <td>Knowledge</td>
-                                <td><span class="js-expt-knowledge">Knowledge</span></td>
+                                <td><span class="js-expt-granularity">Known</span></td>
                             </tr>
                             <tr>
                                 <td>Trial</td>
@@ -81,7 +81,7 @@
             var trialsData;
             var currentTrial;
             var totalNumberOfTrials;
-            var headers = ['Participant id', 'Technique', 'Granularity', 'Knowledge',
+            var headers = ['Participant id', 'Technique', 'Granularity',
                             'Trial no', 'Stimuli', 'User Response', 'Trial Start Time',
                             'Trial End Time', 'Trial Time', 'Accuracy'];
             var trialData = [];
@@ -94,7 +94,6 @@
 
                     var technique = trialResult.technique;
                     var granularity = trialResult.granularity;
-                    var knowledge = trialResult.knowledge;
                     var trialNum = currentTrial;
                     var stimuli = trialResult.stimuli;
                     var userResponse = trialResult.user_response;
@@ -103,7 +102,7 @@
                     var trialDuration = trialResult.duration;
                     var accuracy = stimuli === userResponse ? 1 : 0;
 
-                    var row = [participantId, technique, granularity, knowledge, trialNum,
+                    var row = [participantId, technique, granularity, trialNum,
                                 stimuli, userResponse, trialStartTime,
                                 trialEndTime, trialDuration, accuracy];
                     trialData.push(row);
