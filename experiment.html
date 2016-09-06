@@ -120,25 +120,9 @@
                 }
 
                 if (currentTrial < totalNumberOfTrials) {
-                    if (currentTrial == 0) {
-                        currentTrial = 1
-                        var trialResult = ACPToolKit.getCurrentTrialState();
-
-                        var knowledge = trialResult.knowledge;
-                        var answer = trialResult.answer;
-
-                        document.getElementById("success").innerHTML = "";
-                        document.getElementById("fail").innerHTML = "";
-                        if (knowledge == "known") {
-                            document.getElementById("success").innerHTML = answer;
-                        }else {
-                            document.getElementById("fail").innerHTML = "You have to find the answer !";
-                        }
-                        currentTrial = 0
-                    }
                     // Show the next trial
-                    ACPToolKit.presentTrial(trialsData[currentTrial]);
                     currentTrial += 1;
+                    ACPToolKit.presentTrial(trialsData[currentTrial]);
                     $('.js-expt-current-trial').text(currentTrial);
                 } else {
                     // Last trial completed
