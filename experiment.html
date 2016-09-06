@@ -59,8 +59,7 @@
                     <p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using the <span class="js-expt-technique">AUTOCOMPASTE</span> technique from one of the open windows.</p>
                     <div id="question" class="alert alert-danger js-expt-question">This is a long question!</div>
 
-                    <div id="success" class="alert alert-success"></div>
-                    <div id="fail" class="alert alert-warning"></div>
+                    <div id="display" class="alert alert-success"><span class="js-expt-display"></span></div>
 
                     <button class="btn btn-primary btn-lg" onclick="next()">Next Task</button>
                 </div>
@@ -104,16 +103,6 @@
                     var trialNum = currentTrial;
                     var question = trialResult.question;
                     var answer = trialResult.answer;
-
-                    document.getElementById("success").innerHTML = "";
-                    document.getElementById("fail").innerHTML = "";
-                    if (knowledge == "known") {
-                        document.getElementById("success").innerHTML = answer;
-                    }else {
-                        document.getElementById("fail").innerHTML = "You have to find the answer !";
-                    }
-
-                    location.reload()
 
                     var userResponse = trialResult.user_response;
                     var trialStartTime = trialResult.start_time;
