@@ -59,11 +59,18 @@
                     <div id="question" class="alert alert-danger js-expt-question">This is a long question!</div>
 
 
-                    <div id="msgbox"></div>
+                    <select id="mystuff">
+                        <option value="0">-- Choose One --</option>
+                        <option value="opt1">House</option>
+                        <option value="opt2">Car</option>
+                        <option value="opt3">Bicycle</option>
+                    </select>
 
 
                     <p>The answer is <span class="js-expt-knowledge">known</span>. You can type it directly in the text editor<p>
                     <div class="alert alert-success"><span class="js-expt-answer">answer</span></div>
+
+                    <div id="msgbox"></div>
 
                     <button class="btn btn-primary btn-lg" onclick="next()">Next Task</button>
                 </div>
@@ -95,6 +102,16 @@
             var trialData = [];
             var participantId;
 
+            $('#mystuff').change(function() {
+                opt = $(this).val();
+                if (opt=="opt1") {
+                    $('#msgbox').html('<h2>My House</h2>I have a large house on a quiet street');
+                }else if (opt == "opt2") {
+                    $('#msgbox').html('<h2>My Car</h2>I drive an Audi A200');
+                }else if (opt == "opt3") {
+                    $('#msgbox').html('<h2>My Bicycle</h2>I do not need a bicycle, I have a car.');
+                }
+            })
 
             function next () {
                 if (currentTrial !== 0) {
