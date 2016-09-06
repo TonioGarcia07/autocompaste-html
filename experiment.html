@@ -56,10 +56,11 @@
 
 
                     <button onclick="displayAnswer()">Answer</button>
-                    <p id="demo"></p>
+                    <p id="demo">You can copy paste that:</p>
 
 
-
+                    <!--<p>The answer is <span class="js-expt-knowledge">known</span>. You can type it directly in the text editor<p>
+                    <div class="alert alert-success"><span class="js-expt-answer">answer</span></div>-->
 
 
                     <button class="btn btn-primary btn-lg" onclick="next()">Next Task</button>
@@ -93,10 +94,11 @@
             var participantId;
 
             function displayAnswer() {
-                var time = new Date().getHours();
-                if (time < 20) {
-                    document.getElementById("demo").innerHTML = '<p>The answer is <span class="js-expt-knowledge">known</span>. You can type it directly in the text editor<p>
-                    <div class="alert alert-success"><span class="js-expt-answer">answer</span></div>';
+                var trialResult = ACPToolKit.getCurrentTrialState();
+                var knowledge = trialResult.knowledge;
+
+                if (knowledge == "known") {
+                    document.getElementById("demo").innerHTML = "Good day";
                 }
             }
 
