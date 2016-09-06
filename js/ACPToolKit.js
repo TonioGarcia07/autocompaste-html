@@ -89,14 +89,6 @@ var ACPToolKit = (function () {
             $('.js-expt-question').text(options.question);
             $('.js-expt-answer').text(options.answer);
 
-            document.getElementById("success").innerHTML = "";
-            document.getElementById("fail").innerHTML = "";
-            if (knowledge == "known") {
-                document.getElementById("success").innerHTML = answer;
-            }else {
-                document.getElementById("fail").innerHTML = "You have to find the answer !";
-            }
-
             // Clean up DOM
             wm.destroyAllWindows();
             $('#autocompaste-completion').remove();
