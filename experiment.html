@@ -88,24 +88,26 @@
             var participantId;
 
             function next () {
+                // Save results of current trial
+                var trialResult = ACPToolKit.getCurrentTrialState();
+
+                var technique = trialResult.technique;
+                var granularity = trialResult.granularity;
+                var knowledge = trialResult.knowledge;
+                var trialNum = currentTrial;
+                var question = trialResult.question;
+                var answer = trialResult.answer;
+
+                document.getElementById("success").innerHTML = "";
+                document.getElementById("fail").innerHTML = "";
+                if (knowledge == "known") {
+                    document.getElementById("success").innerHTML = answer;
+                }else {
+                    document.getElementById("fail").innerHTML = "You have to find the answer !";
+                }
+
                 if (currentTrial !== 0) {
-                    // Save results of current trial
-                    var trialResult = ACPToolKit.getCurrentTrialState();
 
-                    var technique = trialResult.technique;
-                    var granularity = trialResult.granularity;
-                    var knowledge = trialResult.knowledge;
-                    var trialNum = currentTrial;
-                    var question = trialResult.question;
-                    var answer = trialResult.answer;
-
-                    document.getElementById("success").innerHTML = "";
-                    document.getElementById("fail").innerHTML = "";
-                    if (knowledge == "known") {
-                        document.getElementById("success").innerHTML = answer;
-                    }else {
-                        document.getElementById("fail").innerHTML = "You have to find the answer !";
-                    }
 
                     var userResponse = trialResult.user_response;
                     var trialStartTime = trialResult.start_time;
