@@ -54,15 +54,8 @@
                     <p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using the <span class="js-expt-technique">AUTOCOMPASTE</span> technique from one of the open windows.</p>
                     <div id="question" class="alert alert-danger js-expt-question">This is a long question!</div>
 
-
-                    <button onclick="displayAnswer()">Answer</button>
                     <div id="success" class="alert alert-success"></div>
                     <div id="fail" class="alert alert-warning"></div>
-
-
-                    <!--<p>The answer is <span class="js-expt-knowledge">known</span>. You can type it directly in the text editor<p>
-                    <div class="alert alert-success"><span class="js-expt-answer">answer</span></div>-->
-
 
                     <button class="btn btn-primary btn-lg" onclick="next()">Next Task</button>
                 </div>
@@ -94,20 +87,6 @@
             var trialData = [];
             var participantId;
 
-            function displayAnswer() {
-                var trialResult = ACPToolKit.getCurrentTrialState();
-                var knowledge = trialResult.knowledge;
-                var answer = trialResult.answer;
-
-                if (knowledge == "known") {
-                    document.getElementById("success").innerHTML = answer;
-                    document.getElementById("fail").innerHTML = "";
-                }else {
-                    document.getElementById("fail").innerHTML = "You have to find it !";
-                    document.getElementById("success").innerHTML = "";
-                }
-            }
-
             function next () {
                 if (currentTrial !== 0) {
                     // Save results of current trial
@@ -119,6 +98,15 @@
                     var trialNum = currentTrial;
                     var question = trialResult.question;
                     var answer = trialResult.answer;
+
+                    if (knowledge == "known") {
+                        document.getElementById("success").innerHTML = answer;
+                        document.getElementById("fail").innerHTML = "";
+                    }else {
+                        document.getElementById("fail").innerHTML = "You have to find it !";
+                        document.getElementById("success").innerHTML = "";
+                    }
+
                     var userResponse = trialResult.user_response;
                     var trialStartTime = trialResult.start_time;
                     var trialEndTime = trialResult.end_time;
