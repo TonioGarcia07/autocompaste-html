@@ -58,9 +58,15 @@
                     <p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using the <span class="js-expt-technique">AUTOCOMPASTE</span> technique from one of the open windows.</p>
                     <div id="question" class="alert alert-danger js-expt-question">This is a long question!</div>
 
-                    <?php if(false) : ?>
-                        <a href="http://yahoo.com">This will only display if $condition is true</a>
-                    <?php endif; ?>
+
+                    <select id="mystuff">
+                        <option value="0">-- Choose One --</option>
+                        <option value="opt1">House</option>
+                        <option value="opt2">Car</option>
+                        <option value="opt3">Bicycle</option>
+                    </select>
+                    <div id="msgbox"></div>
+
 
                     <p>The answer is <span class="js-expt-knowledge">known</span>. You can type it directly in the text editor<p>
                     <div class="alert alert-success"><span class="js-expt-answer">answer</span></div>
@@ -94,6 +100,17 @@
                             'Trial End Time', 'Trial Time', 'Accuracy'];
             var trialData = [];
             var participantId;
+
+            $('#mystuff').change(function() {
+                opt = $(this).val();
+                if (opt=="opt1") {
+                    $('#msgbox').html('<h2>My House</h2>I have a large house on a quiet street');
+                }else if (opt == "opt2") {
+                    $('#msgbox').html('<h2>My Car</h2>I drive an Audi A200');
+                }else if (opt == "opt3") {
+                    $('#msgbox').html('<h2>My Bicycle</h2>I do not need a bicycle, I have a car.');
+                }
+            })
 
             function next () {
                 if (currentTrial !== 0) {
