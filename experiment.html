@@ -101,8 +101,10 @@
 
                 if (knowledge == "known") {
                     document.getElementById("success").innerHTML = answer;
+                    document.getElementById("fail").innerHTML = "";
                 }else {
                     document.getElementById("fail").innerHTML = "You have to find it !";
+                    document.getElementById("success").innerHTML = "";
                 }
             }
 
