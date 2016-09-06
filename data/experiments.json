@@ -1,7 +1,7 @@
 {
     "experiments": [
         { 
-            "technique": "AUTOCOMPASTE", 
+            "technique": "AUTOCOMPASTE",
             "granularity": "sentence",
             "data_file": "data/texts.json",
             "stimuli": "What is acceptor atoms?" 
