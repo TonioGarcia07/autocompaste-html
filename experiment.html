@@ -97,9 +97,10 @@
             function displayAnswer() {
                 var trialResult = ACPToolKit.getCurrentTrialState();
                 var knowledge = trialResult.knowledge;
+                var answer = trialResult.answer;
 
                 if (knowledge == "known") {
-                    document.getElementById("success").innerHTML = <span class="js-expt-answer">answer</span>;
+                    document.getElementById("success").innerHTML = answer;
                 }else {
                     document.getElementById("fail").innerHTML = "You have to find it !";
                 }
