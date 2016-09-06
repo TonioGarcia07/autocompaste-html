@@ -114,7 +114,7 @@ var ACPToolKit = (function () {
 
             // Highlight the relevant text.
             iface.addEventListener('loaded', function () {
-                var lines_to_highlight = question.split("\n\n");
+                var lines_to_highlight = answer.split("\n\n");
 
                 var windows = wm.getWindowList();
                 for (var i = 0; i < windows.length; i++) {
