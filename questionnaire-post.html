@@ -34,93 +34,63 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h1>Post-Experiment Questionnaire</h1>
-                    <hr>
-                    <p>Welcome <span class="js-pid pid"></span>!</p>
+                    <p>Congratulations! You've finished!</p>
+                    <p>Please fill in this post-experiment questionnaire, to give us insights about your experience!</p>
 
-                    <p>Please fill in this form, before proceeding to the experiment.</p>
                     <form id="post-expt-form">
                         <div class="form-group">
-                            <label for="q1">How old are you?</label>
+                            <label for="q1">Do you have remarks about the experiment?</label>
                             <input type="text" class="form-control" id="q1" name="q1" placeholder="Enter answer">
                         </div>
                         <div class="form-group">
-                            <label for="q2">Gender?</label>
+                            <label for="q2">Which technique did you find the most effective in general?</label>
                             <div class="radio">
                               <label>
                                 <input type="radio" name="q2" id="optionsRadios1" value="radio1">
-                                Man
+                                AutoComPaste
                               </label>
                             </div>
                             <div class="radio">
                               <label>
                                 <input type="radio" name="q2" id="optionsRadios2" value="radio2">
-                                Woman
+                                Traditional copy-pasting (ctrl+c, ctrl+v)
                               </label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="q3">Do you often copy and paste shortcuts (CTRL+C and CTRL+V)?</label>
-                            <div class="radio">
-                              <label>
-                                <input type="radio" name="q3" id="optionsRadios1" value="radio1">
-                                Used to it
-                              </label>
-                            </div>
-                            <div class="radio">
-                              <label>
-                                <input type="radio" name="q3" id="optionsRadios2" value="radio2">
-                                Sometimes
-                              </label>
-                            </div>
-                            <div class="radio">
-                              <label>
-                                <input type="radio" name="q3" id="optionsRadios2" value="radio2">
-                                Never used it
-                              </label>
-                            </div>
+                            <label for="q3">Why?</label>
+                            <input type="text" class="form-control" id="q3" name="q3" placeholder="Enter answer">
                         </div>
                         <div class="form-group">
-                            <label for="q4">What is your educational background? (ex: literature, engineering, art...)</label>
+                            <label for="q4">Remarks?</label>
                             <input type="text" class="form-control" id="q4" name="q4" placeholder="Enter answer">
                         </div>
                         <div class="form-group">
-                            <label for="q5">Which operating system do you use?</label>
-                            <div class="checkbox">
+                            <label for="q5">How can we improve the efficiency of the AutoComPaste technique?</label>
+                            <input type="text" class="form-control" id="q5" name="q5" placeholder="Enter answer">
+                        </div>
+                        <div class="form-group">
+                            <label for="q6">Is AutoComPaste easy to familiarize oneself with?</label>
+                            <div class="radio">
                               <label>
-                                <input type="checkbox" name="q5" value="checkbox1">
-                                Mac
+                                <input type="radio" name="q6" id="optionsRadios1" value="radio1">
+                                Yes
                               </label>
                             </div>
-                            <div class="checkbox">
+                            <div class="radio">
                               <label>
-                                <input type="checkbox" name="q5" value="checkbox2">
-                                Windows
-                              </label>
-                            </div>
-                            <div class="checkbox">
-                              <label>
-                                <input type="checkbox" name="q5" value="checkbox2">
-                                Linux
-                              </label>
-                            </div>
-                            <div class="checkbox">
-                              <label>
-                                <input type="checkbox" name="q5" value="checkbox2">
-                                Other
+                                <input type="radio" name="q6" id="optionsRadios2" value="radio2">
+                                No
                               </label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="q5">Question 5 - Textarea</label>
-                            <textarea class="form-control" id="q5" name="q5" placeholder="Enter response"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="q6">Do you know how we could accelerate the process of copy-pasting?</label>
-                            <input type="text" class="form-control" id="q6" name="q6" placeholder="Enter answer">
-                        </div>
-                        <div class="form-group">
-                            <label for="q7">Remarks?</label>
+                            <label for="q7">Why?</label>
                             <input type="text" class="form-control" id="q7" name="q7" placeholder="Enter answer">
+                        </div>
+                        <div class="form-group">
+                            <label for="q8">Do you have any last suggestion?</label>
+                            <textarea class="form-control" id="q8" name="q8" placeholder="Enter response"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                     </form>
