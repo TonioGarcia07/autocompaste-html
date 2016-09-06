@@ -56,7 +56,7 @@
                         </tbody>
                     </table>
                     <p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using the <span class="js-expt-technique">AUTOCOMPASTE</span> technique from one of the open windows.</p>
-                    <div id="stimuli" class="alert alert-danger js-expt-stimuli">This is a long stimuli!</div>
+                    <div id="question" class="alert alert-danger js-expt-question">This is a long question!</div>
                     <p>The answer is <span class="js-expt-knowledge">known</span>. You can type it directly in the text editor<p>
                     <div class="alert alert-success"><strong>Answer</strong></div>
                     <button class="btn btn-primary btn-lg" onclick="next()">Next Task</button>
@@ -84,7 +84,7 @@
             var currentTrial;
             var totalNumberOfTrials;
             var headers = ['Participant id', 'Technique', 'Granularity', 'Knowledge',
-                            'Trial no', 'Stimuli', 'User Response', 'Trial Start Time',
+                            'Trial no', 'Question', 'User Response', 'Trial Start Time',
                             'Trial End Time', 'Trial Time', 'Accuracy'];
             var trialData = [];
             var participantId;
@@ -98,15 +98,15 @@
                     var granularity = trialResult.granularity;
                     var knowledge = trialResult.knowledge;
                     var trialNum = currentTrial;
-                    var stimuli = trialResult.stimuli;
+                    var question = trialResult.question;
                     var userResponse = trialResult.user_response;
                     var trialStartTime = trialResult.start_time;
                     var trialEndTime = trialResult.end_time;
                     var trialDuration = trialResult.duration;
-                    var accuracy = stimuli === userResponse ? 1 : 0;
+                    var accuracy = question === userResponse ? 1 : 0;
 
                     var row = [participantId, technique, granularity, knowledge, trialNum,
-                                stimuli, userResponse, trialStartTime,
+                                question, userResponse, trialStartTime,
                                 trialEndTime, trialDuration, accuracy];
                     trialData.push(row);
                 }

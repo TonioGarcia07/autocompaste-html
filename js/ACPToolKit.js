@@ -80,12 +80,12 @@ var ACPToolKit = (function () {
             currentTrialOptions = options;
 
             var data_file = options.data_file;
-            var stimuli = options.stimuli;
+            var question = options.question;
 
             $('.js-expt-technique').text(options.technique);
             $('.js-expt-granularity').text(options.granularity);
             $('.js-expt-knowledge').text(options.knowledge);
-            $('.js-expt-stimuli').text(options.stimuli);
+            $('.js-expt-question').text(options.question);
 
             // Clean up DOM
             wm.destroyAllWindows();
@@ -112,7 +112,7 @@ var ACPToolKit = (function () {
 
             // Highlight the relevant text.
             iface.addEventListener('loaded', function () {
-                var lines_to_highlight = stimuli.split("\n\n");
+                var lines_to_highlight = question.split("\n\n");
 
                 var windows = wm.getWindowList();
                 for (var i = 0; i < windows.length; i++) {
