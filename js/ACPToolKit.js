@@ -81,11 +81,13 @@ var ACPToolKit = (function () {
 
             var data_file = options.data_file;
             var question = options.question;
+            var answer = options.answer;
 
             $('.js-expt-technique').text(options.technique);
             $('.js-expt-granularity').text(options.granularity);
             $('.js-expt-knowledge').text(options.knowledge);
             $('.js-expt-question').text(options.question);
+            $('.js-expt-answer').text(options.answer);
 
             // Clean up DOM
             wm.destroyAllWindows();

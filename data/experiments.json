@@ -2,87 +2,99 @@
     "experiments": [
         { 
             "technique": "AUTOCOMPASTE",
-            "granularity": "sentence",
+            "granularity": "phrase",
             "knowledge": "known",
             "data_file": "data/texts.json",
-            "question": "What is acceptor atoms?" 
+            "question": "What is acceptor atoms?",
+            "answer": "Trivalent atoms"
         },
         { 
             "technique": "AUTOCOMPASTE", 
             "granularity": "paragraph",
             "knowledge": "known",
             "data_file": "data/texts.json",
-            "question": "What is AC coupling? Circuit that passes an AC signal while blocking a DC voltage." 
+            "question": "What is bistable multivibrator?",
+            "answer": "A multi vibrator with two stable states. An external signal is required to change the output from one state to the other. Also called a latch."
         },
         { 
             "technique": "AUTOCOMPASTE", 
-            "granularity": "phrase",
-            "knowledge": "known",
-            "data_file": "data/texts.json",
-            "question": "number of positive charges" 
-        },
-        { 
-            "technique": "TRADITIONAL", 
             "granularity": "sentence",
             "knowledge": "known",
             "data_file": "data/texts.json",
-            "question": "What is acceptor atoms?" 
-        },
-        { 
-            "technique": "TRADITIONAL", 
-            "granularity": "paragraph",
-            "knowledge": "known",
-            "data_file": "data/texts.json",
-            "question": "What is AC coupling? Circuit that passes an AC signal while blocking a DC voltage." 
+            "question": "What is AC power supply?",
+            "answer": "Power supply that delivers an AC voltage."
         },
         { 
             "technique": "TRADITIONAL", 
             "granularity": "phrase",
             "knowledge": "known",
             "data_file": "data/texts.json",
-            "question": "number of positive charges" 
+            "question": "What is acceptor atoms?",
+            "answer": "Trivalent atoms"
         },
-        {
-            "technique": "AUTOCOMPASTE",
-            "granularity": "sentence",
-            "knowledge": "unknown",
-            "data_file": "data/texts.json",
-            "question": "What is acceptor atoms?"
-        },
-        {
-            "technique": "AUTOCOMPASTE",
+        { 
+            "technique": "TRADITIONAL", 
             "granularity": "paragraph",
-            "knowledge": "unknown",
+            "knowledge": "known",
             "data_file": "data/texts.json",
-            "question": "What is AC coupling? Circuit that passes an AC signal while blocking a DC voltage."
+            "question": "What is bistable multivibrator?",
+            "answer": "A multi vibrator with two stable states. An external signal is required to change the output from one state to the other. Also called a latch."
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "sentence",
+            "knowledge": "known",
+            "data_file": "data/texts.json",
+            "question": "What is AC power supply?",
+            "answer": "Power supply that delivers an AC voltage."
         },
         {
             "technique": "AUTOCOMPASTE",
             "granularity": "phrase",
             "knowledge": "unknown",
             "data_file": "data/texts.json",
-            "question": "number of positive charges"
+            "question": "What is acceptor atoms?",
+            "answer": "Trivalent atoms"
         },
         {
-            "technique": "TRADITIONAL",
-            "granularity": "sentence",
-            "knowledge": "unknown",
-            "data_file": "data/texts.json",
-            "question": "What is acceptor atoms?"
-        },
-        {
-            "technique": "TRADITIONAL",
+            "technique": "AUTOCOMPASTE",
             "granularity": "paragraph",
             "knowledge": "unknown",
             "data_file": "data/texts.json",
-            "question": "What is AC coupling? Circuit that passes an AC signal while blocking a DC voltage."
+            "question": "What is bistable multivibrator?",
+            "answer": "A multi vibrator with two stable states. An external signal is required to change the output from one state to the other. Also called a latch."
+        },
+        {
+            "technique": "AUTOCOMPASTE",
+            "granularity": "sentence",
+            "knowledge": "unknown",
+            "data_file": "data/texts.json",
+            "question": "What is AC power supply?",
+            "answer": "Power supply that delivers an AC voltage."
         },
         {
             "technique": "TRADITIONAL",
             "granularity": "phrase",
             "knowledge": "unknown",
             "data_file": "data/texts.json",
-            "question": "number of positive charges"
+            "question": "What is acceptor atoms?",
+            "answer": "Trivalent atoms"
+        },
+        {
+            "technique": "TRADITIONAL",
+            "granularity": "paragraph",
+            "knowledge": "unknown",
+            "data_file": "data/texts.json",
+            "question": "What is bistable multivibrator?",
+            "answer": "A multi vibrator with two stable states. An external signal is required to change the output from one state to the other. Also called a latch."
+        },
+        {
+            "technique": "TRADITIONAL",
+            "granularity": "sentence",
+            "knowledge": "unknown",
+            "data_file": "data/texts.json",
+            "question": "What is AC power supply?",
+            "answer": "Power supply that delivers an AC voltage."
         }
     ]
 }
