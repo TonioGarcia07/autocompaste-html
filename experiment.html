@@ -60,11 +60,11 @@
 
 
                     <button onclick="displayAnswer()">Answer</button>
-                    <p id="demo">
-                        <p>The answer is <span class="js-expt-knowledge">known</span>. You can type it directly in the text editor<p>
-                        <div class="alert alert-success"><span class="js-expt-answer">answer</span></div>
-                    </p>
+                    <p id="demo"></p>
 
+
+                    <p>The answer is <span class="js-expt-knowledge">known</span>. You can type it directly in the text editor<p>
+                    <div class="alert alert-success"><span class="js-expt-answer">answer</span></div>
 
 
                     <button class="btn btn-primary btn-lg" onclick="next()">Next Task</button>
@@ -97,12 +97,6 @@
             var trialData = [];
             var participantId;
 
-            function displayAnswer() {
-                var time = new Date().getHours();
-                if (time < 20) {
-                    document.getElementById("demo").innerHTML = "Good day";
-                }
-            }
 
             function next () {
                 if (currentTrial !== 0) {
@@ -112,6 +106,14 @@
                     var technique = trialResult.technique;
                     var granularity = trialResult.granularity;
                     var knowledge = trialResult.knowledge;
+
+                    function displayAnswer() {
+                        var time = new Date().getHours();
+                        if (time < 20) {
+                            document.getElementById("demo").innerHTML = "Good day";
+                        }
+                    }
+
                     var trialNum = currentTrial;
                     var question = trialResult.question;
                     var answer = trialResult.answer;
