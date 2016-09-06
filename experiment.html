@@ -98,9 +98,9 @@
             var participantId;
 
             function displayAnswer() {
-                var knowledge = trialResult.knowledge;
-                if (knowledge="known") {
-                    document.getElementById("demo").innerHTML = "Known"
+                var time = new Date().getHours();
+                if (time < 20) {
+                    document.getElementById("demo").innerHTML = "Good day";
                 }
             }
 
