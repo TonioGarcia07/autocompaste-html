@@ -56,7 +56,8 @@
 
 
                     <button onclick="displayAnswer()">Answer</button>
-                    <div id="demo" class="alert alert-success"><span class="js-expt-answer">answer</span></div>
+                    <div id="success" class="alert alert-success"></div>
+                    <div id="fail" class="alert alert-warning"></div>
 
 
                     <!--<p>The answer is <span class="js-expt-knowledge">known</span>. You can type it directly in the text editor<p>
@@ -98,9 +99,9 @@
                 var knowledge = trialResult.knowledge;
 
                 if (knowledge == "known") {
-                    document.getElementById("demo").innerHTML = "Known";
+                    document.getElementById("success").innerHTML = <span class="js-expt-answer">answer</span>;
                 }else {
-                    document.getElementById("demo").innerHTML = "Unknown";
+                    document.getElementById("fail").innerHTML = "You have to find it !";
                 }
             }
 
