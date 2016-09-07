@@ -43,8 +43,7 @@
                     <p>With this experiment, we want to compare the efficiency, accuracy and learnability of two copy-pasting technique. Thus, you are asked to be focused during the experiment and try to finish as fast as you can, while making as few mistakes as possible.</p>
                     <p>Once you press "Start", you will have an interface like this one:</p>
 
-                    <div id="interface"></div>
-
+                    <img src="img/interface.png">
 
                     <form class="form-inline">
                         <button type="submit" class="btn btn-primary btn-lg">Start</button>
@@ -60,12 +59,6 @@
         <script src="js/main.js"></script>
 
         <script>
-            var img = document.createElement("img");
-            img.src = "img/interface.png";
-
-            var src = document.getElementById("interface");
-            src.appendChild(img);
-
             $(function () {
                 $('form').submit(function (event) {
                     event.preventDefault();
