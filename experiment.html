@@ -126,7 +126,7 @@
                     // Show the next trial
                     ACPToolKit.presentTrial(trialsData[orderTrials[currentTrial]]);
                     currentTrial += 1;
-                    $('.js-expt-current-trial').text(currentTrial);
+                    $('.js-expt-current-trial').text(orderTrials[currentTrial]);
                 } else {
                     // Last trial completed
                     ACPToolKit.downloadTrialResults(trialData);
