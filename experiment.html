@@ -83,10 +83,6 @@
         <script>
 
             var trialsData;
-            var orderTrials1 = [0,1,2,3,4,5,6,7,8,9,10,11];
-            var orderTrials2 = [6,7,8,9,10,11,0,1,2,3,4,5];
-            var orderTrials3 = [6,7,8,9,10,11,0,1,2,3,4,5];
-            var orderTrials4 = [6,7,8,9,10,11,0,1,2,3,4,5];
             var currentTrial;
             var totalNumberOfTrials;
             var headers = ['Participant id', 'Technique', 'Granularity', 'Knowledge',
@@ -94,6 +90,13 @@
                             'Trial End Time', 'Trial Time', 'Accuracy'];
             var trialData = [];
             var participantId;
+
+
+            var orderTrials0 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35];
+            var orderTrials1 = [9,10,11,12,13,14,15,16,17,0,1,2,3,4,5,6,7,8,27,28,29,30,31,32,33,34,35,18,19,20,21,22,23,24,25,26];
+            var orderTrials2 = [18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
+            var orderTrials3 = [27,28,29,30,31,32,33,34,35,18,19,20,21,22,23,24,25,26,9,10,11,12,13,14,15,16,17,0,1,2,3,4,5,6,7,8];
+            var orderTrials = [];
 
 
             function next () {
@@ -143,6 +146,15 @@
                     trialData.push(headers);
                     next();
                     participantId = ACPToolKit.getCurrentParticipantId();
+                    if (participantId % 4 == 0) {
+                        orderTrials = orderTrials0
+                    }else if (participantId % 4 == 1) {
+                        orderTrials = orderTrials1
+                    }else if (participantId % 4 == 2) {
+                        orderTrials = orderTrials2
+                    }else {
+                        orderTrials = orderTrials3
+                    }
                 })
             });
         </script>
