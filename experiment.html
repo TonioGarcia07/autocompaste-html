@@ -67,7 +67,7 @@
 
                     <button class="btn btn-primary btn-lg" onclick="next()">Next Task</button>
 
-                    <input type="button" name="loop" id="loop" value="Resume" onclick="startStop();" />
+                    <input type="button" name="loop" id="loop" value="PAUSE" onclick="startStop();" />
                 </div>
                 <div id="autocompaste" class="col-sm-9">
                     <div id="autocompaste-display"></div>
@@ -187,7 +187,7 @@
 
             function startStop(){
                 loop = !loop;
-                document.getElementById("loop").value = loop ? "STOP" : "RESUME";
+                document.getElementById("loop").value = loop ? "PAUSE" : "RESUME";
                 ChangeSrc();
             }
 
