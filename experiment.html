@@ -150,6 +150,8 @@
                     $('.js-expt-current-block').text(currentBlock);
                 } else {
                     if (currentBlock < totalNumberOfBlocks) {
+                        currentTrial = 0;
+                        ACPToolKit.presentTrial(trialsData[orderTrials[currentTrial]]);
                         currentBlock += 1;
                         currentTrial = 1;
                         $('.js-expt-current-block').text(currentBlock);
