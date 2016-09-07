@@ -99,12 +99,12 @@
             var orderTrials;
 
             function next () {
-                participantId = = ACPToolKit.getCurrentParticipantId();
+                participantId = ACPToolKit.getCurrentParticipantId();
                 if (participantId == "P1" || participantId == "P5") {
                     orderTrials = orderTrials1;
-                } else if (participantId == "P2" || participantId == "P6") {
+                } else if(participantId == "P2" || participantId == "P6") {
                     orderTrials = orderTrials2;
-                } else if (participantId == "P3" || participantId == "P7") {
+                } else if(participantId == "P3" || participantId == "P7") {
                     orderTrials = orderTrials3;
                 } else {
                     orderTrials = orderTrials4;
