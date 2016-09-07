@@ -35,13 +35,19 @@
                 <div class="col-md-8 col-md-offset-2">
                     <h1>Instructions</h1>
                     <hr>
-                    <p>Dear participant <span class="js-pid pid"></span>, please read the instructions before the experiment.
+                    <p>Dear participant <span class="js-pid pid"></span>, please read carefully the instructions before the experiment.</p>
 
-                    <p>There should always be an instruction before doing the actual evaluation of the interface.<p>
-                    <p>Enter your instructions to your participant here. Diagrams and screenshots will be very helpful!</p>
+                    <p>Once you press the button "Start", the experiment will begin.</p>
+                    <p>The experiment should last less than 45 minutes.</p>
+
+                    <p>With this experiment, we want to compare the efficiency, accuracy and learnability of two copy-pasting technique. Thus, you are asked to be focused during the experiment and try to finish as fast as you can, while making as few mistakes as possible.</p>
+                    <p>Once you press "Start", you will have an interface like this one:</p>
+
+                    <div id="interface"></div>
+
 
                     <form class="form-inline">
-                        <button type="submit" class="btn btn-primary btn-lg">Next</button>
+                        <button type="submit" class="btn btn-primary btn-lg">Start</button>
                     </form>
                 </div>
             </div>
@@ -54,6 +60,12 @@
         <script src="js/main.js"></script>
 
         <script>
+            var img = document.createElement("img");
+            img.src = "img/interface.png";
+
+            var src = document.getElementById("interface");
+            src.appendChild(img);
+
             $(function () {
                 $('form').submit(function (event) {
                     event.preventDefault();
