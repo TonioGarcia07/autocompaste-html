@@ -8,6 +8,24 @@
             "question": "What is acceptor atoms?",
             "answer": "Trivalent atoms"
         },
+        {
+            "technique": "AUTOCOMPASTE",
+            "granularity": "phrase",
+            "knowledge": "known",
+            "data_file": "data/texts.json",
+            "question": "What is band-pass filter?",
+            "answer": "A tuned circuit"
+        },
+        {
+            "technique": "AUTOCOMPASTE",
+            "granularity": "phrase",
+            "knowledge": "known",
+            "data_file": "data/texts.json",
+            "question": "What is base biasing?",
+            "answer": "A method of biasing a BJT"
+        },
+
+
         { 
             "technique": "AUTOCOMPASTE", 
             "granularity": "paragraph",
@@ -16,6 +34,24 @@
             "question": "What is bistable multivibrator?",
             "answer": "A multi vibrator with two stable states. An external signal is required to change the output from one state to the other. Also called a latch."
         },
+        {
+            "technique": "AUTOCOMPASTE",
+            "granularity": "paragraph",
+            "knowledge": "known",
+            "data_file": "data/texts.json",
+            "question": "What is audio?",
+            "answer": "Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz."
+        },
+        {
+            "technique": "AUTOCOMPASTE",
+            "granularity": "paragraph",
+            "knowledge": "known",
+            "data_file": "data/texts.json",
+            "question": "What is band-pass filter?",
+            "answer": "A tuned circuit designed to pass a band of frequencies between a lower cut-off frequency (f1) and a higher cut-off frequency (f2). Frequencies above and below the pass band are heavily attenuated."
+        },
+
+
         { 
             "technique": "AUTOCOMPASTE", 
             "granularity": "sentence",
@@ -24,30 +60,26 @@
             "question": "What is AC power supply?",
             "answer": "Power supply that delivers an AC voltage."
         },
-        { 
-            "technique": "TRADITIONAL", 
-            "granularity": "phrase",
-            "knowledge": "known",
-            "data_file": "data/texts.json",
-            "question": "What is acceptor atoms?",
-            "answer": "Trivalent atoms"
-        },
-        { 
-            "technique": "TRADITIONAL", 
-            "granularity": "paragraph",
-            "knowledge": "known",
-            "data_file": "data/texts.json",
-            "question": "What is bistable multivibrator?",
-            "answer": "A multi vibrator with two stable states. An external signal is required to change the output from one state to the other. Also called a latch."
-        },
-        { 
-            "technique": "TRADITIONAL", 
+        {
+            "technique": "AUTOCOMPASTE",
             "granularity": "sentence",
             "knowledge": "known",
             "data_file": "data/texts.json",
-            "question": "What is AC power supply?",
-            "answer": "Power supply that delivers an AC voltage."
+            "question": "What is bandwidth?",
+            "answer": "Width of the band of frequencies between the half power points."
         },
+        {
+            "technique": "AUTOCOMPASTE",
+            "granularity": "sentence",
+            "knowledge": "known",
+            "data_file": "data/texts.json",
+            "question": "What is average value?",
+            "answer": "A value of voltage or current where the area of the wave above the value equals the area of the wave below the value."
+        },
+
+
+
+
         {
             "technique": "AUTOCOMPASTE",
             "granularity": "phrase",
@@ -58,6 +90,24 @@
         },
         {
             "technique": "AUTOCOMPASTE",
+            "granularity": "phrase",
+            "knowledge": "unknown",
+            "data_file": "data/texts.json",
+            "question": "What is band-pass filter?",
+            "answer": "A tuned circuit"
+        },
+        {
+            "technique": "AUTOCOMPASTE",
+            "granularity": "phrase",
+            "knowledge": "unknown",
+            "data_file": "data/texts.json",
+            "question": "What is base biasing?",
+            "answer": "A method of biasing a BJT"
+        },
+
+
+        {
+            "technique": "AUTOCOMPASTE",
             "granularity": "paragraph",
             "knowledge": "unknown",
             "data_file": "data/texts.json",
@@ -66,12 +116,130 @@
         },
         {
             "technique": "AUTOCOMPASTE",
+            "granularity": "paragraph",
+            "knowledge": "unknown",
+            "data_file": "data/texts.json",
+            "question": "What is audio?",
+            "answer": "Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz."
+        },
+        {
+            "technique": "AUTOCOMPASTE",
+            "granularity": "paragraph",
+            "knowledge": "unknown",
+            "data_file": "data/texts.json",
+            "question": "What is band-pass filter?",
+            "answer": "A tuned circuit designed to pass a band of frequencies between a lower cut-off frequency (f1) and a higher cut-off frequency (f2). Frequencies above and below the pass band are heavily attenuated."
+        },
+
+
+        {
+            "technique": "AUTOCOMPASTE",
             "granularity": "sentence",
             "knowledge": "unknown",
             "data_file": "data/texts.json",
             "question": "What is AC power supply?",
             "answer": "Power supply that delivers an AC voltage."
         },
+        {
+            "technique": "AUTOCOMPASTE",
+            "granularity": "sentence",
+            "knowledge": "unknown",
+            "data_file": "data/texts.json",
+            "question": "What is bandwidth?",
+            "answer": "Width of the band of frequencies between the half power points."
+        },
+        {
+            "technique": "AUTOCOMPASTE",
+            "granularity": "sentence",
+            "knowledge": "unknown",
+            "data_file": "data/texts.json",
+            "question": "What is average value?",
+            "answer": "A value of voltage or current where the area of the wave above the value equals the area of the wave below the value."
+        },
+
+
+
+
+        {
+            "technique": "TRADITIONAL",
+            "granularity": "phrase",
+            "knowledge": "known",
+            "data_file": "data/texts.json",
+            "question": "What is acceptor atoms?",
+            "answer": "Trivalent atoms"
+        },
+        {
+            "technique": "TRADITIONAL",
+            "granularity": "phrase",
+            "knowledge": "known",
+            "data_file": "data/texts.json",
+            "question": "What is band-pass filter?",
+            "answer": "A tuned circuit"
+        },
+        {
+            "technique": "TRADITIONAL",
+            "granularity": "phrase",
+            "knowledge": "known",
+            "data_file": "data/texts.json",
+            "question": "What is base biasing?",
+            "answer": "A method of biasing a BJT"
+        },
+
+
+        {
+            "technique": "TRADITIONAL",
+            "granularity": "paragraph",
+            "knowledge": "known",
+            "data_file": "data/texts.json",
+            "question": "What is bistable multivibrator?",
+            "answer": "A multi vibrator with two stable states. An external signal is required to change the output from one state to the other. Also called a latch."
+        },
+        {
+            "technique": "TRADITIONAL",
+            "granularity": "paragraph",
+            "knowledge": "known",
+            "data_file": "data/texts.json",
+            "question": "What is audio?",
+            "answer": "Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz."
+        },
+        {
+            "technique": "TRADITIONAL",
+            "granularity": "paragraph",
+            "knowledge": "known",
+            "data_file": "data/texts.json",
+            "question": "What is band-pass filter?",
+            "answer": "A tuned circuit designed to pass a band of frequencies between a lower cut-off frequency (f1) and a higher cut-off frequency (f2). Frequencies above and below the pass band are heavily attenuated."
+        },
+
+
+        {
+            "technique": "TRADITIONAL",
+            "granularity": "sentence",
+            "knowledge": "known",
+            "data_file": "data/texts.json",
+            "question": "What is AC power supply?",
+            "answer": "Power supply that delivers an AC voltage."
+        },
+        {
+            "technique": "TRADITIONAL",
+            "granularity": "sentence",
+            "knowledge": "known",
+            "data_file": "data/texts.json",
+            "question": "What is bandwidth?",
+            "answer": "Width of the band of frequencies between the half power points."
+        },
+        {
+            "technique": "TRADITIONAL",
+            "granularity": "sentence",
+            "knowledge": "known",
+            "data_file": "data/texts.json",
+            "question": "What is average value?",
+            "answer": "A value of voltage or current where the area of the wave above the value equals the area of the wave below the value."
+        },
+
+
+
+
         {
             "technique": "TRADITIONAL",
             "granularity": "phrase",
@@ -82,6 +250,24 @@
         },
         {
             "technique": "TRADITIONAL",
+            "granularity": "phrase",
+            "knowledge": "unknown",
+            "data_file": "data/texts.json",
+            "question": "What is band-pass filter?",
+            "answer": "A tuned circuit"
+        },
+        {
+            "technique": "TRADITIONAL",
+            "granularity": "phrase",
+            "knowledge": "unknown",
+            "data_file": "data/texts.json",
+            "question": "What is base biasing?",
+            "answer": "A method of biasing a BJT"
+        },
+
+
+        {
+            "technique": "TRADITIONAL",
             "granularity": "paragraph",
             "knowledge": "unknown",
             "data_file": "data/texts.json",
@@ -90,11 +276,45 @@
         },
         {
             "technique": "TRADITIONAL",
+            "granularity": "paragraph",
+            "knowledge": "unknown",
+            "data_file": "data/texts.json",
+            "question": "What is audio?",
+            "answer": "Relating to frequencies that can be heard by the human ear. Approximately 20 Hz to 20 kHz."
+        },
+        {
+            "technique": "TRADITIONAL",
+            "granularity": "paragraph",
+            "knowledge": "unknown",
+            "data_file": "data/texts.json",
+            "question": "What is band-pass filter?",
+            "answer": "A tuned circuit designed to pass a band of frequencies between a lower cut-off frequency (f1) and a higher cut-off frequency (f2). Frequencies above and below the pass band are heavily attenuated."
+        },
+
+
+        {
+            "technique": "TRADITIONAL",
             "granularity": "sentence",
             "knowledge": "unknown",
             "data_file": "data/texts.json",
             "question": "What is AC power supply?",
             "answer": "Power supply that delivers an AC voltage."
+        },
+        {
+            "technique": "TRADITIONAL",
+            "granularity": "sentence",
+            "knowledge": "unknown",
+            "data_file": "data/texts.json",
+            "question": "What is bandwidth?",
+            "answer": "Width of the band of frequencies between the half power points."
+        },
+        {
+            "technique": "TRADITIONAL",
+            "granularity": "sentence",
+            "knowledge": "unknown",
+            "data_file": "data/texts.json",
+            "question": "What is average value?",
+            "answer": "A value of voltage or current where the area of the wave above the value equals the area of the wave below the value."
         }
     ]
 }
