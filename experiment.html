@@ -126,7 +126,7 @@
                     // Show the next trial
                     ACPToolKit.presentTrial(trialsData[orderTrials[currentTrial]]);
                     currentTrial += 1;
-                    $('.js-expt-current-trial').text(orderTrials[currentTrial]);
+                    $('.js-expt-current-trial').text(currentTrial);
                 } else {
                     // Last trial completed
                     ACPToolKit.downloadTrialResults(trialData);
@@ -146,13 +146,13 @@
                     next();
                     participantId = ACPToolKit.getCurrentParticipantId();
 
-                    if (participantId == "P1" || participantId == "P5"){
+                    if (participantId == "P1" || participantId == "P5") {
                         orderTrials = orderTrials1;
-                    }elseif (participantId == "P2" || participantId == "P6"){
+                    } elseif (participantId == "P2" || participantId == "P6") {
                         orderTrials = orderTrials2;
-                    }elseif (participantId == "P3" || participantId == "P7"){
+                    } elseif (participantId == "P3" || participantId == "P7") {
                         orderTrials = orderTrials3;
-                    }else {
+                    } else {
                         orderTrials = orderTrials4;
                     }
                 })
