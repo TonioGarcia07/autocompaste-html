@@ -99,6 +99,17 @@
             var orderTrials = orderTrials2;
 
             function next () {
+                participantId = = ACPToolKit.getCurrentParticipantId();
+                if (participantId == "P1" || participantId == "P5") {
+                    orderTrials = orderTrials1;
+                } else if (participantId == "P2" || participantId == "P6") {
+                    orderTrials = orderTrials2;
+                } else if (participantId == "P3" || participantId == "P7") {
+                    orderTrials = orderTrials3;
+                } else {
+                    orderTrials = orderTrials4;
+                }
+
                 if (currentTrial !== 0) {
                     // Save results of current trial
                     var trialResult = ACPToolKit.getCurrentTrialState();
