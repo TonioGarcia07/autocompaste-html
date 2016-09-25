@@ -92,6 +92,7 @@
             function next () {
                 if (currentTrial !== 0) {
                     // Save results of current trial
+                    $('.js-expt-current-trial').text(currentTrial);
                     var trialResult = ACPToolKit.getCurrentTrialState();
 
                     var technique = trialResult.technique;
@@ -132,7 +133,6 @@
                     $('.js-expt-num-blocks').text(totalNumberOfBlocks);
                     trialData.push(headers);
                     next();
-                    $('.js-expt-current-trial').text(currentTrial);
                     participantId = ACPToolKit.getCurrentParticipantId();
                 })
             });
