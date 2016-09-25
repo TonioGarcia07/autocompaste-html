@@ -50,15 +50,21 @@
                                 <td><span class="js-expt-knowledge"></span></td>
                             </tr>
                             <tr>
+                                <td>Block</td>
+                                <td><span class="js-expt-current-block"></span> / <span class="js-expt-num-blocks"></span></td>
+                            </tr>
+                            <tr>
                                 <td>Trial</td>
                                 <td><span class="js-expt-current-trial"></span> / <span class="js-expt-num-trials"></span></td>
                             </tr>
+
                         </tbody>
                     </table>
-
                     <p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using the <span class="js-expt-technique">AUTOCOMPASTE</span> technique from one of the open windows.</p>
                     <div id="question" class="alert alert-danger js-expt-question">There is a problem!</div>
-                    <div id="display" class="alert alert-success">Oh!<span class="js-expt-display"></span></div>
+
+                    <div id="display" class="alert alert-success">Oh yeah!<span class="js-expt-display"></span></div>
+
                     <button class="btn btn-primary btn-lg" onclick="next()">Next Task</button>
                 </div>
                 <div id="autocompaste" class="col-sm-9">
@@ -79,6 +85,7 @@
         <script src="js/ACPToolKit.js"></script>
 
         <script>
+
             var trialsData;
             var totalNumberOfBlocks = 4;
             var currentBlock = 1;
@@ -144,6 +151,7 @@
                 }
             }
 
+
             $(document).ready(function () {
                 $.get('data/experiments.json', function (data) {
                     // Initialise experiments
@@ -151,6 +159,7 @@
                     currentTrial = 0;
                     totalNumberOfTrials = trialsData.length;
                     $('.js-expt-num-trials').text(totalNumberOfTrials);
+                    $('.js-expt-num-blocks').text(totalNumberOfBlocks);
                     trialData.push(headers);
                     next();
                     participantId = ACPToolKit.getCurrentParticipantId();
@@ -159,24 +168,3 @@
         </script>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <!--
-
-
-
-
-        <script>
-
-            -->
