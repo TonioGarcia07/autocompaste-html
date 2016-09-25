@@ -81,12 +81,20 @@
 
             var trialsData;
             var currentTrial;
+            var currentBlock = 1;
             var totalNumberOfTrials;
-            var headers = ['Participant id', 'Technique', 'Granularity',
-                            'Trial no', 'Stimuli', 'User Response', 'Trial Start Time',
+            var totalNumberOfBlocks = 4;
+            var headers = ['Participant id', 'Technique', 'Granularity', 'Knowledge', 'Block'
+                            'Trial no', 'Question', 'Answer', 'User Response', 'Trial Start Time',
                             'Trial End Time', 'Trial Time', 'Accuracy'];
             var trialData = [];
             var participantId;
+
+            var orderTrials1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35];
+            var orderTrials2 = [9,10,11,12,13,14,15,16,17,0,1,2,3,4,5,6,7,8,27,28,29,30,31,32,33,34,35,18,19,20,21,22,23,24,25,26];
+            var orderTrials3 = [18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
+            var orderTrials4 = [27,28,29,30,31,32,33,34,35,18,19,20,21,22,23,24,25,26,9,10,11,12,13,14,15,16,17,0,1,2,3,4,5,6,7,8];
+            var orderTrials = orderTrials1;
 
             function next () {
                 if (currentTrial !== 0) {
@@ -150,7 +158,7 @@
 
 
 
-                    <!--<p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using the <span class="js-expt-technique">AUTOCOMPASTE</span> technique from one of the open windows.</p>
+<!--                <p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using the <span class="js-expt-technique">AUTOCOMPASTE</span> technique from one of the open windows.</p>
                     <div id="question" class="alert alert-danger js-expt-question">There is a problem!</div>
 
                     <div id="display" class="alert alert-success">Oh yeah!<span class="js-expt-display"></span></div>
@@ -165,24 +173,6 @@
 
 
         <script>
-
-            var trialsData;
-            var totalNumberOfBlocks = 4;
-            var currentBlock = 1;
-            var currentTrial;
-            var totalNumberOfTrials;
-            var headers = ['Participant id', 'Technique', 'Granularity', 'Knowledge', 'Block'
-                            'Trial no', 'Question', 'Answer', 'User Response', 'Trial Start Time',
-                            'Trial End Time', 'Trial Time', 'Accuracy'];
-            var trialData = [];
-            var participantId;
-
-            var orderTrials1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35];
-            var orderTrials2 = [9,10,11,12,13,14,15,16,17,0,1,2,3,4,5,6,7,8,27,28,29,30,31,32,33,34,35,18,19,20,21,22,23,24,25,26];
-            var orderTrials3 = [18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
-            var orderTrials4 = [27,28,29,30,31,32,33,34,35,18,19,20,21,22,23,24,25,26,9,10,11,12,13,14,15,16,17,0,1,2,3,4,5,6,7,8];
-            var orderTrials = orderTrials1;
-
 
             function next () {
                 if (currentTrial !== 0) {
