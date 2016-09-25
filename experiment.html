@@ -113,7 +113,6 @@
 
                 if (currentTrial < totalNumberOfTrials) {
                     // Show the next trial
-                    $('.js-expt-current-trial').text(currentTrial);
                     ACPToolKit.presentTrial(trialsData[currentTrial]);
                     currentTrial += 1;
                     $('.js-expt-current-trial').text(currentTrial);
@@ -122,6 +121,7 @@
                     ACPToolKit.downloadTrialResults(trialData);
                     window.location = 'questionnaire-post.html';
                 }
+                $('.js-expt-current-trial').text(currentTrial);
             }
 
             $(document).ready(function () {
