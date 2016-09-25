@@ -56,8 +56,16 @@
                         </tbody>
                     </table>
 
+                    $('.js-expt-technique').text(options.technique);
+                    $('.js-expt-granularity').text(options.granularity);
+                    $('.js-expt-knowledge').text(options.knowledge);
+                    $('.js-expt-question').text(options.question);
+                    $('.js-expt-answer').text(options.answer);
+
+            $('.js-expt-display'
+
                     <p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using the <span class="js-expt-technique">AUTOCOMPASTE</span> technique from one of the open windows.</p>
-                    <div id="stimuli" class="alert alert-danger js-expt-question">There is a problem!</div>
+                    <div id="question" class="alert alert-danger js-expt-question">There is a problem!</div>
                     <div id="display" class="alert alert-success">Oh yeah!<span class="js-expt-display"></span></div>
                     <button class="btn btn-primary btn-lg" onclick="next()">Next Task</button>
                 </div>
@@ -84,7 +92,7 @@
             var currentTrial;
             var totalNumberOfTrials;
             var headers = ['Participant id', 'Technique', 'Granularity',
-                            'Trial no', 'Stimuli', 'User Response', 'Trial Start Time',
+                            'Trial no', 'Answer', 'User Response', 'Trial Start Time',
                             'Trial End Time', 'Trial Time', 'Accuracy'];
             var trialData = [];
             var participantId;
@@ -97,15 +105,15 @@
                     var technique = trialResult.technique;
                     var granularity = trialResult.granularity;
                     var trialNum = currentTrial;
-                    var stimuli = trialResult.stimuli;
+                    var answer = trialResult.answer;
                     var userResponse = trialResult.user_response;
                     var trialStartTime = trialResult.start_time;
                     var trialEndTime = trialResult.end_time;
                     var trialDuration = trialResult.duration;
-                    var accuracy = stimuli === userResponse ? 1 : 0;
+                    var accuracy = answer === userResponse ? 1 : 0;
 
                     var row = [participantId, technique, granularity, trialNum,
-                                stimuli, userResponse, trialStartTime,
+                                answer, userResponse, trialStartTime,
                                 trialEndTime, trialDuration, accuracy];
                     trialData.push(row);
                 }
@@ -128,6 +136,7 @@
                     trialsData = data.experiments;
                     currentTrial = 0;
                     totalNumberOfTrials = trialsData.length;
+                    $('.js-expt-current-trial').text(currentTrial);
                     $('.js-expt-num-trials').text(totalNumberOfTrials);
                     $('.js-expt-num-blocks').text(totalNumberOfBlocks);
                     trialData.push(headers);
