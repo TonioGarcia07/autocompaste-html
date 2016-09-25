@@ -90,6 +90,7 @@
             var participantId;
 
             function next () {
+                $('.js-expt-current-trial').text(currentTrial);
                 if (currentTrial !== 0) {
                     // Save results of current trial
                     var trialResult = ACPToolKit.getCurrentTrialState();
@@ -121,7 +122,6 @@
                     ACPToolKit.downloadTrialResults(trialData);
                     window.location = 'questionnaire-post.html';
                 }
-                $('.js-expt-current-trial').text(currentTrial);
             }
 
             $(document).ready(function () {
