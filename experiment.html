@@ -92,7 +92,6 @@
             function next () {
                 if (currentTrial !== 0) {
                     // Save results of current trial
-                    $('.js-expt-current-trial').text(currentTrial);
                     var trialResult = ACPToolKit.getCurrentTrialState();
 
                     var technique = trialResult.technique;
@@ -111,8 +110,10 @@
                     trialData.push(row);
                 }
 
+
                 if (currentTrial < totalNumberOfTrials) {
                     // Show the next trial
+                    $('.js-expt-current-trial').text(currentTrial);
                     ACPToolKit.presentTrial(trialsData[currentTrial]);
                     currentTrial += 1;
                     $('.js-expt-current-trial').text(currentTrial);
