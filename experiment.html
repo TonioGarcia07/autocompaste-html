@@ -143,6 +143,19 @@
                     }
                 }
             }
+
+            $(document).ready(function () {
+                $.get('data/experiments.json', function (data) {
+                    // Initialise experiments
+                    trialsData = data.experiments;
+                    currentTrial = 0;
+                    totalNumberOfTrials = trialsData.length;
+                    $('.js-expt-num-trials').text(totalNumberOfTrials);
+                    trialData.push(headers);
+                    next();
+                    participantId = ACPToolKit.getCurrentParticipantId();
+                })
+            });
         </script>
     </body>
 </html>
