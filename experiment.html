@@ -129,11 +129,11 @@
                     currentTrial = 0;
                     totalNumberOfTrials = trialsData.length;
                     $('.js-expt-num-trials').text(totalNumberOfTrials);
-                    $('.js-expt-current-trial').text(currentTrial);
                     $('.js-expt-num-blocks').text(totalNumberOfBlocks);
                     trialData.push(headers);
                     next();
                     participantId = ACPToolKit.getCurrentParticipantId();
+                    $('.js-expt-current-trial').text(currentTrial);
                 })
             });
         </script>
