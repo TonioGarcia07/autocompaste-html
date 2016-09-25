@@ -61,9 +61,9 @@
                         </tbody>
                     </table>
                     <p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using the <span class="js-expt-technique">AUTOCOMPASTE</span> technique from one of the open windows.</p>
-                    <div id="question" class="alert alert-danger js-expt-question">There is a problem!</div>
+                    <div id="question" class="alert alert-danger js-expt-question">This is a long question!</div>
 
-                    <div id="display" class="alert alert-success">Oh yeah!<span class="js-expt-display"></span></div>
+                    <div id="display" class="alert alert-success"><span class="js-expt-display"></span></div>
 
                     <button class="btn btn-primary btn-lg" onclick="next()">Next Task</button>
                 </div>
@@ -91,20 +91,34 @@
             var currentBlock = 1;
             var currentTrial;
             var totalNumberOfTrials;
-            var headers = ['Participant id', 'Technique', 'Granularity', 'Knowledge', 'Block'
+            var headers = ['Participant id', 'Technique', 'Granularity', 'Knowledge',
                             'Trial no', 'Question', 'Answer', 'User Response', 'Trial Start Time',
                             'Trial End Time', 'Trial Time', 'Accuracy'];
             var trialData = [];
             var participantId;
 
+
             var orderTrials1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35];
             var orderTrials2 = [9,10,11,12,13,14,15,16,17,0,1,2,3,4,5,6,7,8,27,28,29,30,31,32,33,34,35,18,19,20,21,22,23,24,25,26];
             var orderTrials3 = [18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
             var orderTrials4 = [27,28,29,30,31,32,33,34,35,18,19,20,21,22,23,24,25,26,9,10,11,12,13,14,15,16,17,0,1,2,3,4,5,6,7,8];
-            var orderTrials = orderTrials1;
-
+            var orderTrials4;
 
             function next () {
+
+<!-- For some reason, this function doesn't work properly, so I'll modify the code myself before sending the link to the participant.
+
+                if (participantId == "P1" || participantId == "P5") {
+                    orderTrials = orderTrials1;
+                } else if(participantId == "P2" || participantId == "P6") {
+                    orderTrials = orderTrials2;
+                } else if(participantId == "P3" || participantId == "P7") {
+                    orderTrials = orderTrials3;
+                } else {
+                    orderTrials = orderTrials4;
+                }
+-->
+
                 if (currentTrial !== 0) {
                     // Save results of current trial
                     var trialResult = ACPToolKit.getCurrentTrialState();
@@ -137,9 +151,8 @@
                 } else {
                     if (currentBlock < totalNumberOfBlocks) {
                         currentTrial = 0;
-                        currentBlock += 1;
                         ACPToolKit.presentTrial(trialsData[orderTrials[currentTrial]]);
-
+                        currentBlock += 1;
                         currentTrial = 1;
                         $('.js-expt-current-block').text(currentBlock);
                         $('.js-expt-current-trial').text(currentTrial);
