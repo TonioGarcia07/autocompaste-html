@@ -90,7 +90,7 @@ var ACPToolKit = (function () {
             $('.js-expt-answer').text(options.answer);
 
             $('.js-expt-display').text("")
-            if (options.knowledge =="known") {
+            if (options.knowledge == "known") {
                 $('.js-expt-display').text(options.answer)
             }
 
