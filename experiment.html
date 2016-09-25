@@ -56,14 +56,6 @@
                         </tbody>
                     </table>
 
-                    $('.js-expt-technique').text(options.technique);
-                    $('.js-expt-granularity').text(options.granularity);
-                    $('.js-expt-knowledge').text(options.knowledge);
-                    $('.js-expt-question').text(options.question);
-                    $('.js-expt-answer').text(options.answer);
-
-            $('.js-expt-display'
-
                     <p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using the <span class="js-expt-technique">AUTOCOMPASTE</span> technique from one of the open windows.</p>
                     <div id="question" class="alert alert-danger js-expt-question">There is a problem!</div>
                     <div id="display" class="alert alert-success">Oh yeah!<span class="js-expt-display"></span></div>
@@ -136,7 +128,6 @@
                     trialsData = data.experiments;
                     currentTrial = 0;
                     totalNumberOfTrials = trialsData.length;
-                    $('.js-expt-current-trial').text(currentTrial);
                     $('.js-expt-num-trials').text(totalNumberOfTrials);
                     $('.js-expt-num-blocks').text(totalNumberOfBlocks);
                     trialData.push(headers);
